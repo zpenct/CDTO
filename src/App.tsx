@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import HarryPotterPage from "./pages/harry-potter";
 

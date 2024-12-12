@@ -76,8 +76,12 @@ const LoginPage = () => {
     try {
       await login(email, password);
       navigate("/");
-    } catch (error:any) {
-      console.error("Login failed:", error.message);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error(error.message);
+      } else {
+        console.error("Unexpected error", error);
+      }
     }
   };
 

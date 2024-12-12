@@ -86,6 +86,8 @@ export const ProductCard = React.memo(
   }
 );
 
+ProductCard.displayName = "ProductCard";
+
 const Card = styled.div`
   max-width: 18rem;
   border-radius: 0.5rem;
