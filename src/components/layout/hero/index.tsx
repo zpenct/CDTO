@@ -12,7 +12,9 @@ const HeroSection: React.FC<Props> = ({ setFilter }) => {
 
   const handleSelect = (option: string) => {
     setFilter((prev) => ({ ...prev, type: option }));
-    setSearchParams({ type: option }); //Get value lainnya
+    const updatedSearchParams = Object.fromEntries(searchParams.entries());
+    updatedSearchParams.type = option;
+    setSearchParams(updatedSearchParams);
   };
 
   const options = [
