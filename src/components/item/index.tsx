@@ -125,20 +125,6 @@ const CardText = styled.p`
   }
 `;
 
-const SpellName = styled.h2`
-  font-size: 1.25rem;
-  color: #2c3e50;
-  margin-bottom: 0.5rem;
-  border-bottom: 2px solid #3498db;
-  padding: 1rem;
-  padding-bottom: 0.5rem;
-
-  @media (max-width: 480px) {
-    font-size: 1.125rem;
-    padding: 0.75rem;
-  }
-`;
-
 const SpellUse = styled.p`
   color: #7f8c8d;
   padding: 0 1rem 1rem;

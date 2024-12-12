@@ -76,7 +76,7 @@ const LoginPage = () => {
     try {
       await login(email, password);
       navigate("/");
-    } catch (error: any) {
+    } catch (error:any) {
       console.error("Login failed:", error.message);
     }
   };

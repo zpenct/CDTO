@@ -20,7 +20,6 @@ const Button = styled.button`
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: "primary" | "secondary" | "success" | "danger";
   type?: "button" | "submit" | "reset";
   onClick?: () => void;
   disabled?: boolean;
@@ -28,7 +27,6 @@ interface ButtonProps {
 
 const MainButton: React.FC<ButtonProps> = ({
   children,
-  variant = "primary",
   type = "button",
   onClick,
   disabled = false,

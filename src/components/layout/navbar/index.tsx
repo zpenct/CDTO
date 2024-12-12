@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useAuth } from "../../../hooks";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import MainButton from "../../ui/button";
 
 const Navbar = styled.nav`
@@ -48,6 +48,7 @@ const NavLink = styled.a`
 
 const NavbarHeader = () => {
   const { user, logout } = useAuth();
+  const navigate = useNavigate();
   return (
     <header>
       <Navbar>
@@ -69,7 +70,14 @@ const NavbarHeader = () => {
               <Link to={"/signin"}>Login</Link>
             </MainButton>
           ) : (
-            <MainButton onClick={logout}>Logout</MainButton>
+            <MainButton
+              onClick={() => {
+                logout();
+                navigate("/signin");
+              }}
+            >
+              Logout
+            </MainButton>
           )}
         </div>
       </Navbar>

@@ -65,7 +65,7 @@ const StorePage = () => {
       </div>
 
       <Container isLoading={isLoading} titleSection="Product">
-        {filteredProducts?.map((item: TProduct, index: number) => (
+        {filteredProducts?.map((item: TProduct) => (
           <ProductCard
             key={item.id}
             product={item}
